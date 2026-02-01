@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SloaneX</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="top-nav">
+      <div class="logo">SloaneX</div>
+      <div class="nav-links">
+        <button class="nav-btn" data-target="home">Home</button>
+        <button class="nav-btn" data-target="exclusive">Exclusive Content</button>
+        <button class="nav-btn" data-target="admin">Admin</button>
+      </div>
+    </nav>
+
+    <main>
+      <section id="home" class="page active">
+        <div class="banner" id="homeBanner"></div>
+        <div class="home-content">
+          <div class="home-text">
+            <h1>SloaneX</h1>
+            <p>Sign Up For Exclusive Content</p>
+            <button id="signupBtn" class="primary-btn">5 CAD billed monthly</button>
+          </div>
+          <div class="profile-circle" id="profileCircle"></div>
+        </div>
+      </section>
+
+      <section id="exclusive" class="page">
+        <aside class="sidebar">
+          <button class="side-btn" data-target="account">Account</button>
+          <button class="side-btn" data-target="subscription">Subscription</button>
+          <button class="side-btn" data-target="support">Support</button>
+        </aside>
+        <div class="exclusive-content">
+          <div class="column">
+            <h2>Images</h2>
+            <div id="imagesGrid" class="content-grid"></div>
+          </div>
+          <div class="column">
+            <h2>Videos</h2>
+            <div id="videosGrid" class="content-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="account" class="page">
+        <aside class="sidebar">
+          <button class="side-btn" data-target="account">Account</button>
+          <button class="side-btn" data-target="subscription">Subscription</button>
+          <button class="side-btn" data-target="support">Support</button>
+          <button class="side-btn back-btn" data-target="exclusive">Back</button>
+        </aside>
+        <div class="under-construction">
+          <h2>Under Construction</h2>
+        </div>
+      </section>
+
+      <section id="subscription" class="page">
+        <aside class="sidebar">
+          <button class="side-btn" data-target="account">Account</button>
+          <button class="side-btn" data-target="subscription">Subscription</button>
+          <button class="side-btn" data-target="support">Support</button>
+          <button class="side-btn back-btn" data-target="exclusive">Back</button>
+        </aside>
+        <div class="under-construction">
+          <h2>Under Construction</h2>
+        </div>
+      </section>
+
+      <section id="support" class="page">
+        <aside class="sidebar">
+          <button class="side-btn" data-target="account">Account</button>
+          <button class="side-btn" data-target="subscription">Subscription</button>
+          <button class="side-btn" data-target="support">Support</button>
+          <button class="side-btn back-btn" data-target="exclusive">Back</button>
+        </aside>
+        <div class="support-form">
+          <h2>Support</h2>
+          <form id="supportForm">
+            <label>
+              Name
+              <input type="text" id="supportName" required />
+            </label>
+            <label>
+              Email
+              <input type="email" id="supportEmail" required />
+            </label>
+            <label>
+              Description
+              <textarea id="supportDescription" rows="6" required></textarea>
+              <span id="wordCount">0 / 200 words</span>
+            </label>
+            <button type="submit" id="supportSubmit" class="primary-btn" disabled>
+              Submit
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section id="admin" class="page">
+        <div class="admin-content">
+          <div class="upload-grid">
+            <div class="upload-box" data-upload="profile">
+              <h3>Profile Picture</h3>
+              <input type="file" accept="image/*" />
+              <div class="progress">
+                <div class="progress-bar"></div>
+                <span class="progress-text">0%</span>
+                <span class="progress-time">0s</span>
+              </div>
+            </div>
+            <div class="upload-box" data-upload="banner">
+              <h3>Banner Picture</h3>
+              <input type="file" accept="image/*" />
+              <div class="progress">
+                <div class="progress-bar"></div>
+                <span class="progress-text">0%</span>
+                <span class="progress-time">0s</span>
+              </div>
+            </div>
+            <div class="upload-box" data-upload="images">
+              <h3>Upload Pictures</h3>
+              <input type="file" accept="image/*" multiple />
+              <div class="progress">
+                <div class="progress-bar"></div>
+                <span class="progress-text">0%</span>
+                <span class="progress-time">0s</span>
+              </div>
+            </div>
+            <div class="upload-box" data-upload="videos">
+              <h3>Upload Video</h3>
+              <input type="file" accept="video/*" multiple />
+              <div class="progress">
+                <div class="progress-bar"></div>
+                <span class="progress-text">0%</span>
+                <span class="progress-time">0s</span>
+              </div>
+            </div>
+          </div>
+          <div id="adminGallery" class="admin-gallery"></div>
+        </div>
+      </section>
+    </main>
+
+    <div id="termsModal" class="modal">
+      <div class="modal-content">
+        <h2>Terms of Agreement</h2>
+        <div id="termsScroll" class="terms-scroll">
+          <p>
+            By accessing this website or purchasing any services, you agree that all
+            services are provided on an "as-is" basis and you assume all risks related
+            to your use of the services and content. You agree to hold the owner,
+            affiliates, and partners harmless from any liability, loss, claim, or
+            damages arising from your use of the website or any services provided.
+            You acknowledge that no guarantees or warranties are made regarding the
+            outcomes of any services. You accept responsibility for complying with
+            applicable laws and regulations. This agreement constitutes the entire
+            understanding between you and the site owner and may be updated at any
+            time without prior notice.
+          </p>
+          <p>
+            You further agree that the site owner is not liable for any direct,
+            indirect, incidental, special, or consequential damages that result from
+            the use or inability to use the services, including but not limited to
+            reliance on information, interruptions, or loss of data. If you do not
+            agree to these terms, you must discontinue use of this website.
+          </p>
+        </div>
+        <div class="modal-actions" id="termsActions">
+          <button id="agreeBtn" class="primary-btn">Agree</button>
+          <button id="adultBtn" class="primary-btn">I Am Over 18 Years Old</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="signupPopup" class="signup-popup">
+      <div class="signup-circle">Under Construction</div>
+    </div>
+
+    <div id="adminLock" class="modal">
+      <div class="modal-content">
+        <h2>Enter Admin Code</h2>
+        <input type="password" id="adminCode" />
+        <button id="adminSubmit" class="primary-btn">Submit</button>
+      </div>
+    </div>
+
+    <div id="deleteConfirm" class="delete-confirm">
+      <p>Are You Sure You Want To Delete This Content?</p>
+      <label>
+        <input type="checkbox" id="confirmYes" />
+        Yes
+      </label>
+      <label>
+        <input type="checkbox" id="confirmNo" />
+        No
+      </label>
+    </div>
+
+    <div id="fullscreenView" class="fullscreen-view">
+      <button id="collapseBtn" class="primary-btn">Click To Collapse</button>
+      <div id="fullscreenContent"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
