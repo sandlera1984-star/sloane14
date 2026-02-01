@@ -41,7 +41,7 @@ const state = {
   deleteTarget: null,
 };
 
-const adminHash = '620ea9e1685335e43243b0e35a2e3fc1acaac2f2ed3c08356bae0a3b54e6ae10';
+const adminHash = 'c8482f0ec1b4ba6c4d6a0a6a838f8da8a4c7b9d4937a0ef87f25e9a63d9ce9a5';
 
 const getStoredArray = (key) => {
   try {
